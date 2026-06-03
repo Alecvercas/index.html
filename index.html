@@ -114,16 +114,13 @@
   .vf-service-card p { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--grey-400); line-height: 1.7; }
   .vf-service-tag { display: inline-block; margin-top: 16px; font-family: 'Jost', sans-serif; font-size: 9.5px; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid rgba(140,115,85,0.3); background: var(--accent-pale); }
 
-  /* INSIGHTS */
-  .vf-insights-hero { background: var(--grey-100); border-bottom: 1px solid var(--grey-200); padding: 64px 0 0; }
-  .vf-insights-hero .vf-page { padding-top: 0; padding-bottom: 0; }
-  .vf-tab-bar { display: flex; gap: 0; border-top: 1px solid var(--grey-200); margin-top: 40px; }
-  .vf-tab-btn { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 22px; border: none; background: none; cursor: pointer; color: var(--grey-400); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s, border-color 0.15s; }
-  .vf-tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); font-weight: 500; }
-  .vf-tab-btn:hover { color: var(--grey-700); }
-  .vf-insights-body { background: var(--white); }
-  .vf-tab-panel { display: none; }
-  .vf-tab-panel.active { display: block; }
+// ── Insights Data ──
+// To add a new post: copy one of the objects below, paste it at the top,
+// and fill in your details.
+// isFeatured: true = large card, false = small card
+// tabId: must be exactly 'cases', 'blog', or 'market'
+// url: link to your article (Google Doc, PDF, LinkedIn post, etc.)
+var insightsData = [];
 
   /* FEATURED ARTICLE */
   .vf-featured { display: grid; grid-template-columns: 1fr 1.7fr; border: 1px solid var(--grey-200); border-radius: 8px; overflow: hidden; margin-bottom: 28px; cursor: pointer; transition: box-shadow 0.2s; }
