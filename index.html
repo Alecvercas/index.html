@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -343,6 +342,13 @@ function showSection(id, btn) {
   document.querySelectorAll('.vf-nav-link').forEach(function(l){ l.classList.remove('active'); });
   if (btn) btn.classList.add('active');
   window.scrollTo(0, 0);
+
+  // This updates the URL in the browser so it can be copied and shared
+  if(history.pushState) {
+    history.pushState(null, null, '#' + id);
+  } else {
+    window.location.hash = '#' + id;
+  }
 }
 
 // ── Insights tabs ──
