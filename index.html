@@ -312,25 +312,17 @@
           <div class="vf-contact-block"><h4>Office</h4><p>England, United Kingdom</p></div>
           <p class="vf-contact-disclaimer">Vercas Financial Limited is registered in England and Wales. Commercial finance brokerage services are subject to eligibility and lender criteria.</p>
         </div>
-        <div class="vf-contact-form">
-          <div class="vf-field"><label>Full name</label><input type="text" placeholder="Your name"></div>
-          <div class="vf-field"><label>Business name</label><input type="text" placeholder="Your company"></div>
-          <div class="vf-field"><label>Email address</label><input type="email" placeholder="you@yourbusiness.co.uk"></div>
-          <div class="vf-field"><label>Type of finance</label>
-            <select>
-              <option value="">Select an area...</option>
-              <option>Commercial mortgage</option>
-              <option>Asset finance</option>
-              <option>Business loan</option>
-              <option>Invoice / trade finance</option>
-              <option>Development finance</option>
-              <option>Specialist / structured finance</option>
-              <option>Not sure &mdash; I would like to discuss</option>
-            </select>
-          </div>
-          <div class="vf-field"><label>Message</label><textarea placeholder="Tell us briefly about your business and what you are looking to achieve..."></textarea></div>
-          <button class="vf-submit">Send enquiry</button>
-        </div>
+        <form action="https://formsubmit.co/alec@vercasfinancial.co.uk" method="POST" class="vf-contact-form">
+          <input type="hidden" name="_subject" value="New Website Enquiry - Vercas Financial">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="vf-field"><label>Full name</label><input type="text" name="Full Name" placeholder="Your name" required></div>
+          <div class="vf-field"><label>Business name</label><input type="text" name="Business Name" placeholder="Your company"></div>
+          <div class="vf-field"><label>Phone number</label><input type="tel" name="Phone Number" placeholder="Your phone number" required></div>
+          <div class="vf-field"><label>Email address</label><input type="email" name="Email Address" placeholder="you@yourbusiness.co.uk" required></div>
+          <div class="vf-field"><label>Brief overview of funding requirement</label><textarea name="Funding Requirement" placeholder="Tell us briefly about your business and what you are looking to achieve..." required></textarea></div>
+          <div class="vf-field"><label>Anything else we should know?</label><textarea name="Additional Information" placeholder="Any specific timelines, challenges, or details..."></textarea></div>
+          <button type="submit" class="vf-submit">Send enquiry</button>
+        </form>
       </div>
     </div>
   </div>
