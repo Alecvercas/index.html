@@ -493,12 +493,20 @@ window.addEventListener('DOMContentLoaded', function() {
   // Render the insights first
   renderInsights();
   
-  // Check if the URL has a section tag (e.g., #contact) and load it
+  // 1. Check for a hash (e.g., #contact)
   var hash = window.location.hash.substring(1);
-  if (hash && document.getElementById('sec-' + hash)) {
-    var btnIndex = ['hero', 'about', 'services', 'insights', 'contact'].indexOf(hash);
+  
+  // 2. Check for a query parameter (e.g., ?section=contact)
+  var params = new URLSearchParams(window.location.search);
+  var querySection = params.get('section');
+  
+  // Use whichever instruction successfully passed through
+  var targetSection = hash || querySection;
+  
+  if (targetSection && document.getElementById('sec-' + targetSection)) {
+    var btnIndex = ['hero', 'about', 'services', 'insights', 'contact'].indexOf(targetSection);
     var targetBtn = btnIndex !== -1 ? document.querySelectorAll('.vf-nav-link')[btnIndex] : null;
-    showSection(hash, targetBtn);
+    showSection(targetSection, targetBtn);
   }
 });
 </script>
