@@ -311,18 +311,22 @@
           <div class="vf-contact-block"><h4>Office</h4><p>England, United Kingdom</p></div>
           <p class="vf-contact-disclaimer">Vercas Financial Limited is registered in England and Wales. Commercial finance brokerage services are subject to eligibility and lender criteria.</p>
         </div>
-       <form action="https://formsubmit.co/alec@vercasfinancial.co.uk" method="POST" class="vf-contact-form" target="_top">
-          <input type="hidden" name="_subject" value="New Website Enquiry - Vercas Financial">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://www.vercasfinancial.co.uk/thank-you">
-          <div class="vf-field"><label>Full name</label><input type="text" name="Full Name" placeholder="Your name" required></div>
-          <div class="vf-field"><label>Business name</label><input type="text" name="Business Name" placeholder="Your company"></div>
-          <div class="vf-field"><label>Phone number</label><input type="tel" name="Phone Number" placeholder="Your phone number" required></div>
-          <div class="vf-field"><label>Email address</label><input type="email" name="Email Address" placeholder="you@yourbusiness.co.uk" required></div>
-          <div class="vf-field"><label>Brief overview of funding requirement</label><textarea name="Funding Requirement" placeholder="Tell us briefly about your business and what you are looking to achieve..." required></textarea></div>
-          <div class="vf-field"><label>Anything else we should know?</label><textarea name="Additional Information" placeholder="Any specific timelines, challenges, or details..."></textarea></div>
-          <button type="submit" class="vf-submit">Send enquiry</button>
-        </form>
+   <script>var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){ document.getElementById('vf-contact-container').innerHTML = '<h3 style=\'font-family: Cormorant Garamond, serif; font-size: 26px; font-weight: 400; color: #1a1714; margin-bottom: 16px;\'>Thank you for your enquiry.</h3><p style=\'font-family: Jost, sans-serif; font-size: 14.5px; font-weight: 300; color: #7c756d; line-height: 1.85;\'>Your message has been successfully sent to Vercas Financial. We will be in touch with you shortly to discuss your funding requirements.</p>'; }"></iframe>
+        
+        <div id="vf-contact-container">
+          <form action="https://formsubmit.co/alec@vercasfinancial.co.uk" method="POST" class="vf-contact-form" target="hidden_iframe" onsubmit="submitted=true;">
+            <input type="hidden" name="_subject" value="New Website Enquiry - Vercas Financial">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="vf-field"><label>Full name</label><input type="text" name="Full Name" placeholder="Your name" required></div>
+            <div class="vf-field"><label>Business name</label><input type="text" name="Business Name" placeholder="Your company"></div>
+            <div class="vf-field"><label>Phone number</label><input type="tel" name="Phone Number" placeholder="Your phone number" required></div>
+            <div class="vf-field"><label>Email address</label><input type="email" name="Email Address" placeholder="you@yourbusiness.co.uk" required></div>
+            <div class="vf-field"><label>Brief overview of funding requirement</label><textarea name="Funding Requirement" placeholder="Tell us briefly about your business and what you are looking to achieve..." required></textarea></div>
+            <div class="vf-field"><label>Anything else we should know?</label><textarea name="Additional Information" placeholder="Any specific timelines, challenges, or details..."></textarea></div>
+            <button type="submit" class="vf-submit">Send enquiry</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
